@@ -1,0 +1,6 @@
+{
+  "challenge_module": "RH.Challenge",
+  "solution_module": "RH.Solution",
+  "theorem_names": ["RH.reals_exist", "RH.zeta_exists", "RH.zeta_unique"],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

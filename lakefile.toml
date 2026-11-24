@@ -1,0 +1,27 @@
+name = "rh"
+defaultTargets = ["RH"]
+
+[leanOptions]
+autoImplicit = false
+
+[[lean_lib]]
+name = "RH"
+globs = ["RH.+"]
+
+# The final theorem; not a default target (see Assembly.lean).
+[[lean_lib]]
+name = "Assembly"
+roots = ["Assembly"]
+
+# Same Mathlib revision as leanprover-community/riemann-hypothesis.
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "31ce06eaadf4a200c0e1407c5f10953cf606b8f8"
+
+# The Lean proof of the Riemann Hypothesis (Alpöge, 2026), at the revision whose build
+# cache is pinned in its scripts/cache-baselines.json for this toolchain.
+[[require]]
+name = "tree"
+git = "https://github.com/leanprover-community/riemann-hypothesis"
+rev = "2ef232d2992c67d457089833b7ec9e0c262f9370"
